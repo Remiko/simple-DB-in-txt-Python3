@@ -29,7 +29,7 @@ def std_msg():
         std_dic[name] = list(map(int, score.split(' ')))
         sum_score = std_dic[name][0] + std_dic[name][1] + std_dic[name][2]
         std_dic[name].append(sum_score)
-        insert_msg()
+        insert_msg(name)
         return '成功写入记录'
 
 
