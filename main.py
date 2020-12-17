@@ -33,12 +33,11 @@ def std_msg():
         return '成功写入记录'
 
 
-def insert_msg():
-    with open('学生信息数据库.txt', 'a', encoding='utf-8') as f:
-        for k in std_dic.keys():
-            f.write(k+'---'+str(std_dic[k][0])+'---'+str(std_dic[k][1])+'---'+str(std_dic[k][2])+'---'+str(std_dic[k][3]
-                                                                                                           ))
-            f.write('\n')
+def insert_msg(name):
+    with open('/Users/wuyufeng/Desktop/学生信息数据库.txt', 'a', encoding='utf-8') as f:
+        f.write(name + '---' + str(std_dic[name][0]) + '---' + str(std_dic[name][1]) + '---' + str(
+                std_dic[name][2]) + '---' + str(std_dic[name][3]))
+        f.write('\n')
 
 
 def show_msg():
